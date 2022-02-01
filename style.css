@@ -1,0 +1,439 @@
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500;600;700;800&display=swap');
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+:root
+{
+    font-size: 16px;
+    --dark: #1D1E20;
+    --white: #F7F8FA;
+    --gold: #d5a021;
+    --white-secondary: #f5f1ed;
+    --thumbBG: #060606;
+    --scrollbarBG: #1d1e20;
+
+    font-family: 'Assistant', sans-serif;
+}
+
+h1{
+    font-size: clamp(3rem,3vw,4.375rem);
+    font-weight: 800;
+    color: var(--white);
+
+}
+
+.grid-container
+{
+  
+    min-height: 100vh;
+    max-width: 100vw;
+    display: grid;
+    grid-template-columns: 150px 1fr 2fr;
+    justify-items: center;
+}
+
+
+
+.nav
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--dark);
+    width: 100%;
+    font-size: clamp(1.5rem,2vw,1.75rem);
+    padding: 1em 1em;
+    position: sticky;
+    top: 0;
+    min-height: 100vh;
+    align-self: flex-start;
+    border-right: 5px solid#343536;
+  
+}
+
+
+
+.home i , .export i
+{
+    color: var(--gold);
+    
+}
+
+.menu-items
+{
+    display: flex;
+    flex-direction: column; 
+}
+
+.menu-items i
+{
+    color: var(--white-secondary);
+    padding: 1em 0;
+}
+.menu-items i:hover, .home i:hover, .export i:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.menu-items i.link-active
+{
+    color: var(--gold);
+}
+
+.img
+{
+    background:  linear-gradient(black, black), url("img/portrait.jpg");
+    width: 100%;
+    background-blend-mode: saturation;
+    background-color: rgba(0, 0, 0, 0.70);
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: end;
+    flex-direction: column;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    min-height: 100vh;
+    align-self: baseline;
+    border-right: 2px solid var(--gold);
+    
+}
+
+.img-content p
+{
+    font-size: clamp(1.5rem,2vw,1.9rem);
+    color: var(--gold);
+    font-weight: 400;
+    text-align: center;
+    padding: 1em 0 ;
+    
+}
+.socials 
+{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.socials i
+{
+    font-size: clamp(1rem,1vw,1.125rem);
+    color: var(--white-secondary);
+    padding: 1em 0;
+}
+
+.socials i:hover
+{
+    cursor: pointer;
+    color: var(--gold);
+    transform: scale(1.2);
+
+}
+
+.img-content
+{
+    padding-bottom: 5em;
+}
+
+
+.content 
+{
+    background-color: var(--dark);
+    box-shadow: inset 4px 8px 15px -2px #000000;
+    padding: 1em 5em;
+
+    
+
+}
+
+.about-me h1{
+    font-size: clamp(3.4rem,4vw,5.6rem);
+}
+
+.about-me::after
+{
+    display: block;
+    content: "";
+    border-bottom: 2px solid #343536 ;
+    padding-bottom: 3rem;
+    
+}
+
+.attributes
+{
+    color: var(--gold) !important;
+    font-size: clamp(1.3rem,2vw,1.5rem) !important;
+    font-weight: 300;
+}
+
+.attributes span
+{
+    color: #bbbcbc;
+}
+.content p, ul
+{
+    color: #bbbcbc;
+    font-size: clamp(1rem,1vw,1.37rem);
+    line-height: 1.75;
+    font-weight: 400;
+    padding: 1em 0;
+}
+
+
+.services h2
+{
+    font-size: clamp(3rem,2vw,3.75rem);
+    font-weight: 800;
+    color: var(--white);
+}
+
+.services
+{
+    padding: 3rem 0;
+}
+
+.services-grid
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    row-gap: 8em;
+    padding: 6em 0;
+
+}
+
+.service-item i
+{
+    font-size: clamp(2.5rem,2vw,3.1rem);
+    color: var(--gold);
+    padding: .5em 0;
+
+}
+
+.service-item h6{
+    font-size: clamp(1.37rem,2vw,1.75rem);
+    color: var(--white);
+}
+
+.service-item p
+{
+    width: 75%;
+}
+.services::after
+{
+
+    display: block;
+    content: "";
+    border-bottom: 2px solid #343536 ;
+    padding-bottom: 3rem;
+
+}
+
+/* Portfolio */
+
+.portfolio h2
+{
+    font-size: clamp(3rem,2vw,3.75rem);
+    font-weight: 800;
+    color: var(--white);
+}
+
+.portfolio
+{
+    padding: 3rem 0;
+}
+
+.portfolio-grid
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    row-gap: 8em;
+    padding: 6em 0;
+    align-items: center;
+
+}
+
+.portfolio-item i
+{
+    font-size: clamp(2.5rem,2vw,3.1rem);
+    color: var(--gold);
+    padding: .5em 0;
+
+}
+
+.portfolio-item h6{
+    font-size: clamp(1.37rem,2vw,1.75rem);
+    color: var(--white);
+}
+
+.portfolio-item p
+{
+    max-width: 75%;
+}
+.portfolio::after
+{
+
+    display: block;
+    content: "";
+    border-bottom: 2px solid #343536 ;
+    padding-bottom: 3rem;
+
+}
+
+.portfolio-item:hover
+{
+    transform: scale(1.1);
+}
+
+
+/* Scrollbar */
+
+body::-webkit-scrollbar {
+    width: 11px;
+  }
+
+  body {
+    scrollbar-width: thin;
+    scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: var(--scrollbarBG);
+  }
+  body::-webkit-scrollbar-thumb {
+    background-color: var(--thumbBG) ;
+    border-radius: 6px;
+    border: 3px solid var(--scrollbarBG);
+  }
+
+
+  @media (max-width: 1440px)
+{
+    .nav
+    {
+        border-right: none;
+        border-bottom: 5px solid#343536;
+    }
+    .img{
+        border-right: none;
+        border-bottom: 2px solid var(--gold);
+    }
+    .grid-container
+    {
+        height: 20vh;
+        display: flex;
+        flex-direction: column;
+        row-gap: 0;
+
+
+    }
+
+    .nav
+    {
+        position: static;
+        align-self: flex-start;
+        flex-direction: row;
+        min-height: 10vh !important;
+    }
+
+    .img
+    {
+        position: static;
+        transition: none;
+        align-self: flex-start;
+        min-height: 60vh !important;
+        transition: none;
+        background-position: top;
+    }
+
+    .img:hover
+    {
+        transform: none;
+    }
+
+    .menu-items{
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .menu-items i
+{
+   
+    padding: 0 1em;
+}
+
+}
+
+@media (max-width: 700px)
+{
+    
+    .services-grid
+    {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .service-item p
+    {
+        width: 100%;
+    }
+    .portfolio-grid
+    {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .portfolio-item p
+    {
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 500px)
+{
+    
+    .services-grid
+    {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .service-item p
+    {
+        width: 100%;
+    }
+
+    .portfolio-grid
+    {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .portfolio-item p
+    {
+        width: 100%;
+    }
+
+}
+
+
+
